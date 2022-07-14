@@ -1,0 +1,15 @@
+#%RAML 1.0 ResourceType
+  post:
+    description: Creating Organizations in osvc system
+    body:
+      application/json:
+        type: postOrganizationsRequest
+        example: !include ../../examples/requests/postOrganizations.json
+    responses:
+      201:
+        body:
+          application/json:
+            type: postOrganizationsResponse
+            example: !include ../../examples/responses/postOrganizations.json
+    is: [clientCredentials]
+      

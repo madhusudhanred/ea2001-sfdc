@@ -1,0 +1,43 @@
+#%RAML 1.0 DataType
+type: object
+properties:
+  Organization:
+    type: object
+    properties:      
+      orgname:
+        type: string
+        required: true
+      orgId:
+        type: number
+        required: true
+      status:
+        type: number        
+        required: true
+      timeZone:
+        type: string
+        required: true
+      primaryaddress1:
+        type: string
+        required: true
+      primaryaddress2:
+        type: string
+        required: false
+      primaryaddress3:
+        type: string
+        required: false
+      City:
+        type: string
+        required: true
+      postalcode:
+        type: string
+        required: true
+      State:
+          type: string
+          required: true
+      Country:
+        type: string
+        required: true
+      activContractors:
+        type: string
+        maxLength: 1
+        required: true

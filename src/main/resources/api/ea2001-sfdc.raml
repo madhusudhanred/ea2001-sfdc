@@ -1,0 +1,27 @@
+#%RAML 1.0
+version: V1
+baseUri: api/exp/sfdc/v1
+title: sfdc Exp API
+description: SFDC Exp API to call sa1001 to  managing Organizations
+# created by madhu on 14-07-2022 JIRA#CIGNIS722-2 Added POST /organizations
+protocols:
+  - HTTPS
+  - HTTP
+mediaType: 
+- application/json
+
+types:
+  postOrganizationsRequest: !include libraries/DataTypes/requests/postOrganization.raml
+  postOrganizationsResponse: !include libraries/DataTypes/responses/postOrganization.raml
+
+traits:
+  clientCredentials: !include libraries/traits/clientCredentials.raml
+
+resourceTypes:
+  organizationResourceType: !include libraries/resourceTypes/organization.raml
+
+/organizations:
+  type: organizationResourceType
+
+              
+          
